@@ -11,12 +11,11 @@ public class Input
     public int price { get; set; }
 
     public Input() { }
-    public Input(string name, int age, int quntyMETH, int price)
+    public Input(string name, int age)
     {
         this.name = name;
         this.age = age;
-        this.quntyMETH = quntyMETH;
-        this.price = price;
+
     }
 
 }

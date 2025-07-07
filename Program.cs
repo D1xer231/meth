@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Hisenberg;
 
@@ -34,8 +36,67 @@ class Program
         }
 
         await Task.Delay(3000);
+        Console.Clear();
+        Walt.MethCalcTxt();
 
-        
+        System.Console.WriteLine("Choose the next two options: ");
+        await Task.Delay(3000);
+
+        System.Console.WriteLine("price per gramm[1]   or  total earnings[2]");
+        string? key = Console.ReadLine();
+        Console.Clear();
+        Walt.MethCalcTxt();
+        if (key == "1")
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            System.Console.Write("How much do YOU want to earn $: ");
+            int price1 = Convert.ToInt32(Console.ReadLine());
+
+            System.Console.Write("How much product: ");
+            int quant1 = Convert.ToInt32(Console.ReadLine());
+
+            int res1 = price1 / quant1;
+
+            Walt.MethCalcTxt();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            System.Console.WriteLine($"Price per gramm of your product is $: {res1}.");
+            Console.ResetColor();
+        } if (key == "2")
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            System.Console.Write("How much product YOU have: ");
+            int price2 = Convert.ToInt32(Console.ReadLine());
+
+            System.Console.Write("Price per gramm $: ");
+            int quant2 = Convert.ToInt32(Console.ReadLine());
+
+            int res2 = price2 * quant2;
+
+            Console.Clear();
+            Walt.MethCalcTxt();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            System.Console.WriteLine($"Total price is $: {res2}.");
+            Console.ResetColor();
+            if (res2 >= 1000)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    await Task.Delay(500);
+                    System.Console.WriteLine("WOW!!!");
+                }
+                await Task.Delay(3000);
+                Console.Clear();
+
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                System.Console.WriteLine("BETTER CALL SOUL!!!");
+                Console.ResetColor();
+                await Task.Delay(500);
+                // Process.Start("shutdown", "/s /t 0");
+
+            }
+        }
+
+
 
 
 
