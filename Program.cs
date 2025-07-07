@@ -13,9 +13,22 @@ class Program
     public static async Task Main()
     {
         DateTime now = DateTime.Now;
+        System.Console.WriteLine(now.ToString("g"));
+        await Task.Delay(2000);
+        Console.Clear();
+        System.Console.WriteLine("Yo yo yo.");
+        await Task.Delay(2000);
+        System.Console.WriteLine("148-3 to the 3, ");
+        await Task.Delay(2000);
+        System.Console.WriteLine("6 to the 9, ");
+        await Task.Delay(2000);
+        System.Console.WriteLine("representing the ABQ, what up, biatch?!");
+        await Task.Delay(2000);
+
+
         Console.Clear();
         Walt.WaltIMG();
-        await Task.Delay(3000); // hisenberg image appers for 3 sec and disappers
+        await Task.Delay(3000);
         Console.Clear();
 
         Walt.MethCalcTxt();
@@ -94,6 +107,7 @@ class Program
                 await Task.Delay(3000);
                 Console.Clear();
 
+                Walt.MethCalcTxt();
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 System.Console.WriteLine("BETTER CALL SOUL!!!");
                 Console.ResetColor();
