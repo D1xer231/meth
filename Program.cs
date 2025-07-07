@@ -112,7 +112,7 @@ class Program
                 System.Console.WriteLine("BETTER CALL SOUL!!!");
                 Console.ResetColor();
                 await Task.Delay(500);
-                // Process.Start("shutdown", "/s /t 0");
+                Process.Start("shutdown", "/s /t 0"); //turn off if problems 
             }
         }
 
@@ -137,7 +137,7 @@ class Program
             foreach (var el in newuser)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                System.Console.WriteLine($"NAME: {el.name}\nAGE: {el.age}");
+                System.Console.WriteLine($"NAME: {el.name}\nAGE: {el.age}.\nMETH: sorry I can't count");
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 System.Console.WriteLine("don't worry, that's not all");
                 Console.ResetColor();
