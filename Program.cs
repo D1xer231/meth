@@ -142,7 +142,8 @@ class Program
                 System.Console.WriteLine("don't worry, that's not all");
                 Console.ResetColor();
             }
-                
         }
+
+        Console.ReadKey();
     }
 }
