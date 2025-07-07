@@ -2,6 +2,9 @@
 using System.Runtime.ConstrainedExecution;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Xml.Serialization;
+using System.IO;
+using System.Collections;
 
 namespace Hisenberg;
 
@@ -9,6 +12,7 @@ class Program
 {
     public static async Task Main()
     {
+        DateTime now = DateTime.Now;
         Console.Clear();
         Walt.WaltIMG();
         await Task.Delay(3000); // hisenberg image appers for 3 sec and disappers
@@ -16,6 +20,7 @@ class Program
 
         Walt.MethCalcTxt();
 
+        Console.ResetColor();
         System.Console.Write("Enter YOUR name: ");
         string? name = Console.ReadLine();
 
@@ -26,6 +31,7 @@ class Program
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             System.Console.WriteLine("Age Error, YOU must be more than 18");
+            System.Console.WriteLine("Be careful!");
             Console.ResetColor();
         }
         else
@@ -61,7 +67,8 @@ class Program
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             System.Console.WriteLine($"Price per gramm of your product is $: {res1}.");
             Console.ResetColor();
-        } if (key == "2")
+        }
+        if (key == "2")
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             System.Console.Write("How much product YOU have: ");
@@ -92,14 +99,36 @@ class Program
                 Console.ResetColor();
                 await Task.Delay(500);
                 // Process.Start("shutdown", "/s /t 0");
-
             }
         }
 
 
+        Input user = new Input(name, age);
+        XmlSerializer xml = new XmlSerializer(typeof(Input[]));
+        await Task.Delay(300);
+        using (FileStream file = new FileStream(name + "_order.xml", FileMode.OpenOrCreate))
+        {
+            Input[] users = new Input[] { user };
+            xml.Serialize(file, users);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            System.Console.WriteLine("Well, Well");
+            System.Console.WriteLine("YOUR order saved on your pc!");
+            Console.ResetColor();
+        }
 
+        using (FileStream file = new FileStream(name + "_order.xml", FileMode.OpenOrCreate))
+        {
+            Input[] newuser = xml.Deserialize(file) as Input[] ?? new Input[0];
 
-
-
+            foreach (var el in newuser)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                System.Console.WriteLine($"NAME: {el.name}\nAGE: {el.age}");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                System.Console.WriteLine("don't worry, that's not all");
+                Console.ResetColor();
+            }
+                
+        }
     }
 }
