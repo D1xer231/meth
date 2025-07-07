@@ -1,0 +1,2 @@
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Release\net8.0\win-x64\publish\meth.pdb
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Release\net8.0\win-x64\publish\meth.exe

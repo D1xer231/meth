@@ -1,0 +1,15 @@
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Debug\net8.0\meth.exe
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Debug\net8.0\meth.deps.json
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Debug\net8.0\meth.runtimeconfig.json
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Debug\net8.0\meth.dll
+C:\Users\aalex\OneDrive\Рабочий стол\meth\bin\Debug\net8.0\meth.pdb
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.AssemblyInfoInputs.cache
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.AssemblyInfo.cs
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.csproj.CoreCompileInputs.cache
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.sourcelink.json
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.dll
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\refint\meth.dll
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.pdb
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\meth.genruntimeconfig.cache
+C:\Users\aalex\OneDrive\Рабочий стол\meth\obj\Debug\net8.0\ref\meth.dll
