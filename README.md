@@ -6,5 +6,9 @@
 #### app ask user for basic data such as name, age etc.
 #### at the very end creates a file .xml with his name and age
 
-###### if u choose option 1, and the amount of money more or equal 1000
+##### if u choose option 1, and the amount of money more or equal 1000
 #### YUOR  pc will be shutdown
+
+###### for info: telegram: @d1xer_231
+###### branch -> master
+###### repasitory -> origin
