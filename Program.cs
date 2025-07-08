@@ -18,6 +18,12 @@ class Program
 
         Walt.Pinkman();
         await Task.Delay(3000);
+        Console.Clear();
+
+
+        Walt.byKapitanMoshonka();
+        await Task.Delay(3000);
+        Console.Clear();
 
         Console.Clear();
         Walt.WaltIMG();
