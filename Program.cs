@@ -12,19 +12,12 @@ class Program
 {
     public static async Task Main()
     {
+        Console.Clear();
         DateTime now = DateTime.Now;
         System.Console.WriteLine(now.ToString("g"));
-        await Task.Delay(2000);
-        Console.Clear();
-        System.Console.WriteLine("Yo yo yo.");
-        await Task.Delay(2000);
-        System.Console.WriteLine("148-3 to the 3, ");
-        await Task.Delay(2000);
-        System.Console.WriteLine("6 to the 9, ");
-        await Task.Delay(2000);
-        System.Console.WriteLine("representing the ABQ, what up, biatch?!");
-        await Task.Delay(2000);
 
+        Walt.Pinkman();
+        await Task.Delay(3000);
 
         Console.Clear();
         Walt.WaltIMG();
@@ -115,6 +108,12 @@ class Program
                 Process.Start("shutdown", "/s /t 0"); //turn off if problems 
             }
         }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            System.Console.WriteLine("ERROR");
+            Console.ResetColor();
+        }
 
 
         Input user = new Input(name, age);
@@ -143,7 +142,5 @@ class Program
                 Console.ResetColor();
             }
         }
-
-        Console.ReadKey();
     }
 }

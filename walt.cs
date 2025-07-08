@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Hisenberg;
 
@@ -71,5 +72,19 @@ class Walt
         Console.ForegroundColor = ConsoleColor.DarkCyan;
         System.Console.WriteLine(meth);
         Console.ResetColor();
+    }
+    public static void Pinkman()
+    {
+        string[] Pinkman = {
+            "Yo yo yo.",
+            "148-3 to the 3",
+            "6 to the 9, ",
+            "representing the ABQ, what up, biatch?!"
+        };
+        foreach (var el in Pinkman)
+        {
+            Console.WriteLine(el);
+            // await Task.Delay(2000);
+        }
     }
 }
