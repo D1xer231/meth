@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Hisenberg;
 
@@ -71,5 +72,33 @@ class Walt
         Console.ForegroundColor = ConsoleColor.DarkCyan;
         System.Console.WriteLine(meth);
         Console.ResetColor();
+    }
+    public static void Pinkman()
+    {
+        string[] Pinkman = {
+            "Yo yo yo.",
+            "148-3 to the 3",
+            "6 to the 9, ",
+            "representing the ABQ, what up, biatch?!"
+        };
+        foreach (var el in Pinkman)
+        {
+            Console.WriteLine(el);
+            // await Task.Delay(2000);
+        }
+    }
+
+    public static void byKapitanMoshonka()
+    {
+        string[] author = {
+            "  __              __ __               _  __                   __  ___              __                   __         ",
+            " / /_   __  __   / //_/____ _ ____   (_)/ /_ ____ _ ____     /  |/  /____   _____ / /_   ____   ____   / /__ ____ _",
+            "/ __ \\ / / / /  / ,<  / __ `// __ \\ / // __// __ `// __ \\   / /|_/ // __ \\ / ___// __ \\ / __ \\ / __ \\ / //_// __ `/",
+            "/ /_/ // /_/ /  / /| |/ /_/ // /_/ // // /_ / /_/ // / / /  / /  / // /_/ /(__  )/ / / // /_/ // / / // ,<  / /_/ / ",
+            "/_.___/ \\__, /  /_/ |_|\\__,_// .___//_/ \\__/ \\__,_//_/ /_/  /_/  /_/ \\____//____//_/ /_/ \\____//_/ /_//_/|_| \\__,_/  ",
+            "       /____/               /_/                                                                                      "
+         };
+        foreach (string el in author)
+            System.Console.WriteLine(el);
     }
 }
